@@ -23,6 +23,10 @@ const MindNode = () => {
     };
 
     const onConnect = (params) => setElements(e => addEdge(params,e));
+
+    const onElementClick = (element) =>{
+        console.log('hii',element)
+    }
     
     return(
         <Fragment>
@@ -35,6 +39,7 @@ const MindNode = () => {
             connectionLineType = "bezier"
             snapToGrid = {true}
             snapGrid={[16,16]}
+            onElementClick={onElementClick}
             >
                 <Background
                 color="#888"
